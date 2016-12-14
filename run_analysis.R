@@ -72,8 +72,8 @@
 
  # Creating the new data set (averae for variables and activities)
 
- TidySet <- aggregate(. ~subjectId + activityId, setWithActivityNames, mean)
+ average_data <- aggregate(. ~subjectId + activityId, setWithActivityNames, mean)
 
- TidySet <- TidySet[order(TidySet$subjectId, TidySet$activityId),]
+ average_data <- average_data[order(average_data$subjectId, average_data$activityId),]
 
- write.table(TidySet, "average_data.txt", row.name=FALSE)
+ write.table(average_data, "average_data.txt", row.name=FALSE)
