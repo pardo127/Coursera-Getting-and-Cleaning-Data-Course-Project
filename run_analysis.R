@@ -76,4 +76,4 @@
 
  TidySet <- TidySet[order(TidySet$subjectId, TidySet$activityId),]
 
- write.table(TidySet, "average_and_std.txt", row.name=FALSE)
+ write.table(TidySet, "average_data.txt", row.name=FALSE)
